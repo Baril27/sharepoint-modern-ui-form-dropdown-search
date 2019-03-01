@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ClientSideComponentInstance
+        Title="DropdownSearch"
+        Location="ClientSideExtension.ApplicationCustomizer"
+        ComponentId="796d3f19-2c8b-41be-8ae1-0d08f3575ba8"
+        Properties="{&quot;testMessage&quot;:&quot;Test message&quot;}">
+    </ClientSideComponentInstance>
+</Elements>
