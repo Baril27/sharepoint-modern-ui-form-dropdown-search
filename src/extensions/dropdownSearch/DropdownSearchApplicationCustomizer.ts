@@ -12,7 +12,8 @@ import * as strings from 'DropdownSearchApplicationCustomizerStrings';
 // MS Variables
 const MS_DROPDOWN_CLASS: string = 'ms-Dropdown',
 MS_DROPDOWN_ITEMS_CLASS: string = 'ms-Dropdown-items',
-MS_DROPDOWN_OPTION_TEXT_CLASS: string = 'ms-Dropdown-optionText';
+MS_DROPDOWN_OPTION_TEXT_CLASS: string = 'ms-Dropdown-optionText',
+MS_DROPDOWN_OPTION_CONTAINER_CLASS: string = 'ms-Dropdown-item';
 
 // Extension Variables
 const DROPDOWN_SEARCH_INPUT_CLASS: string = 'dropdown-search-input',
@@ -51,7 +52,7 @@ export default class DropdownSearchApplicationCustomizer
       setTimeout(function() {
         jQuery('.' + MS_DROPDOWN_ITEMS_CLASS).prepend(`
           <input placeholder='` + DROPDOWN_SEARCH_INPUT_PLACEHOLDER_TEXT + `' class='` + DROPDOWN_SEARCH_INPUT_CLASS + ' ' + DROPDOWN_SEARCH_INPUT_JS_CLASS + `' />
-        `);
+        `).focus();
       }, 1);
     });
   }
@@ -62,11 +63,11 @@ export default class DropdownSearchApplicationCustomizer
       var searchText = jQuery('.' + DROPDOWN_SEARCH_INPUT_JS_CLASS).val().toString().toLowerCase();
 
       // Hide all the options initially
-      jQuery('.' + MS_DROPDOWN_OPTION_TEXT_CLASS).parents('button').hide();
+      jQuery('.' + MS_DROPDOWN_OPTION_TEXT_CLASS).parents('.' + MS_DROPDOWN_OPTION_CONTAINER_CLASS).hide();
   
       jQuery('.' + MS_DROPDOWN_OPTION_TEXT_CLASS).each(function() {
         if (jQuery(this).text().toUpperCase().indexOf(searchText.toUpperCase()) != -1) {
-          jQuery(this).parents('button').show();
+          jQuery(this).parents('.' + MS_DROPDOWN_OPTION_CONTAINER_CLASS).show();
         }
       });
     });
