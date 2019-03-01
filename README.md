@@ -1,6 +1,9 @@
-## sharepoint-modern-ui-form-dropdown-search
+## SharePoint Modern UI Dropdown Search
 
-This is where you include your WebPart documentation.
+This extension gives the ability to search dropdowns within the modern SharePoint form ui.
+
+![alt text](https://raw.githubusercontent.com/baril27/sharepoint-modern-ui-form-dropdown-search/master/examples/usage.gif)
+
 
 ### Building the code
 
@@ -19,8 +22,8 @@ This package produces the following:
 
 ### Build options
 
-gulp clean - TODO
-gulp test - TODO
-gulp serve - TODO
-gulp bundle - TODO
-gulp package-solution - TODO
+* gulp clean
+* gulp test
+* gulp serve
+* gulp bundle --ship
+* gulp package-solution --ship
